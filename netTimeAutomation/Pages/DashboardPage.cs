@@ -1,5 +1,9 @@
 ﻿using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
 using netTimeAutomation.Pages.Sections;
+using System.Diagnostics.CodeAnalysis;
+using static netTimeAutomation.Pages.Sections.LeftPanel;
+using static netTimeAutomation.Pages.Widgets.ChangeLanguage;
 
 namespace netTimeAutomation.Pages {
     public class DashboardPage {
@@ -15,7 +19,7 @@ namespace netTimeAutomation.Pages {
         #endregion
 
 
-        public LeftPanel LetPanel => new LeftPanel(page);
+        public LeftPanel LeftPanel => new LeftPanel(page);
         public TopBar TopBar => new TopBar(page);
 
         public DashboardPage(IPage page) {
@@ -26,7 +30,7 @@ namespace netTimeAutomation.Pages {
         {
             await dropDownMarkingType.ClickAsync();
         }
-        
+
         //public async Task SelectMarkingType(string markingTypeName) {            
         //    await markingType().GetByText(markingTypeName).ClickAsync();            
         //}

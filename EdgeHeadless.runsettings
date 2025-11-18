@@ -12,7 +12,7 @@
             <ManagerLogin>usrmng@grupospec.com</ManagerLogin>
             <EmployeeLogin>pmorata@grupospec.com</EmployeeLogin>
             <EmployeePassword></EmployeePassword>
-            <netOneURL>https://c000.ntone.gospec.net/login.html?q=49687</netOneURL>
+            <netOneURL>https://c000.ntone.gospec.net/login.html</netOneURL>
         </EnvironmentVariables>
     </RunConfiguration>
     <!-- Playwright -->

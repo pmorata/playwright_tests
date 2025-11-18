@@ -1,4 +1,5 @@
 ﻿using Microsoft.Playwright;
+using System.Text.RegularExpressions;
 
 namespace netTimeAutomation.Pages.Sections {
     public class LeftPanel{
@@ -18,24 +19,18 @@ namespace netTimeAutomation.Pages.Sections {
         public ILocator ButtonCreateMark => page.Locator("[src='./assets/svg/white/clock_brand.svg']");
         public ILocator ImageLogo => page.Locator("[src='./assets/img/logos/ntOneLogoWhite.svg']");
 
+        public ILocator ButtonNotifications => page.Locator("[src='./assets/svg/white/notification_brand.svg']");
+        public ILocator ButtonChangePIN => page.Locator("[src='./assets/svg/white/password_brand.svg']").GetByText(new Regex("/PIN"));
+        public ILocator ButtonChangePassword => page.Locator("[src='./assets/svg/white/password_brand.svg']");
+        public ILocator ButtonLastConnection=> page.Locator("[src='./assets/svg/white/last-login_brand.svg']");
+        public ILocator ButtonChangeLanguage => page.Locator("[src='./assets/svg/white/globe.svg']");
+        public ILocator ButtonAbout => page.Locator("[src='./assets/svg/white/about_brand.svg']");                       
+
         public ILocator Version => page.GetByText("/^Version");
         #endregion
 
-        protected enum Languages {            
-            Catalan = 1,
-            English = 2,
-            Spanish = 3,            
-            Euskara = 4,
-            French = 5,
-            Portuguese = 6
-        }
-
         public LeftPanel(IPage page) {
             this.page = page;
-        }
-
-        public async Task ChangeLanguage(Languages newLanguage){
-
         }
     }
 }
