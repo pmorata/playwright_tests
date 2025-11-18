@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/netTimeAutomation/bin/Debug/net9.0
+/netTimeAutomation/obj
+/.vs
+/netTimeAutomation/.vs
