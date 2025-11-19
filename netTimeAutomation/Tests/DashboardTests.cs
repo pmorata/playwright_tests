@@ -23,7 +23,7 @@ public class DashboardTests{
         }
 
         [Test]
-        public async Task UserCanChangeLanguageChangeLanguageToFrench() {
+        public async Task EmployeeCanChangeLanguageToFrench() {
             await loginPage.GoTo();
             await loginPage.LoginForm(Environment.GetEnvironmentVariable("EmployeeLogin") ?? "", Environment.GetEnvironmentVariable("EmployeePassword") ?? "");
             await dashboardPage.LeftPanel.ButtonConfiguration.ClickAsync();
