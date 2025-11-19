@@ -32,11 +32,13 @@ namespace netTimeAutomation.Pages {
             await page.GotoAsync(Environment.GetEnvironmentVariable("netOneURL") ?? "");
         }
         public async Task LoginEmployee() {
-            await loginEmployee.ClickAsync();
+            await GoTo();
+            await LoginForm(Environment.GetEnvironmentVariable("EmployeeLogin") ?? "", Environment.GetEnvironmentVariable("EmployeePassword") ?? "");
         }
 
         public async Task LoginManagement() {
-            await loginManagement.ClickAsync();
+            await GoTo();
+            await LoginForm(Environment.GetEnvironmentVariable("ManagerLogin") ?? "", Environment.GetEnvironmentVariable("ManagerPassword") ?? "");
         }
 
         public async Task ShowLoginForm() {
@@ -47,7 +49,8 @@ namespace netTimeAutomation.Pages {
         }
 
         public async Task LoginForm(string user, string password) {
-            await ShowLoginForm();
+            // la máquina usada para el testing envía directamente al formulario de login, no hace falta el showloginform
+            //await ShowLoginForm();
             await textboxUser.FillAsync(user);
             await textboxPassword.FillAsync(password);
             await buttonLogin.ClickAsync();

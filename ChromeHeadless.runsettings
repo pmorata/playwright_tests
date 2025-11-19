@@ -9,9 +9,11 @@
         <EnvironmentVariables>
             <!-- For debugging selectors, it's recommend to set the following environment variable -->
             <DEBUG>pw:api</DEBUG>
-            <ManagerLogin>usrmng@grupospec.com</ManagerLogin>
-            <EmployeeLogin>usrEmp@grupospec.com</EmployeeLogin>
-            <netOneURL>https://c000.ntone.gospec.net/login.html</netOneURL>
+            <EmployeeLogin>testUser</EmployeeLogin>
+            <EmployeePassword>testPassword1-</EmployeePassword>
+            <ManagerLogin>admin</ManagerLogin>
+            <ManagerPassword>Sotllo-3072</ManagerPassword>
+            <netOneURL>https://ntone-jdtest.preprod.gospec.net/</netOneURL>
         </EnvironmentVariables>
     </RunConfiguration>
     <!-- Playwright -->  
