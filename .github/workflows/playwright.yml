@@ -28,12 +28,12 @@ jobs:
 
       - name: Restore tools
         run: dotnet tool restore
-
-      - name: Install Playwright browsers
-        run: dotnet tool run playwright install --with-deps
-
+        
       - name: Build
         run: dotnet build --configuration Release
+        
+      - name: Install Playwright browsers
+        run: dotnet tool run playwright install --with-deps      
 
       - name: Run tests
         run: dotnet test --configuration Release --no-build
